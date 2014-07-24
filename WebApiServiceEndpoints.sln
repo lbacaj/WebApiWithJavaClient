@@ -7,6 +7,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiServiceEndpoints", "W
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiServiceEndpoints.Tests", "WebApiServiceEndpoints.Tests\WebApiServiceEndpoints.Tests.csproj", "{BC4DED67-14EF-4472-9FD8-140E918011D7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JavaClient", "JavaClient", "{AA763B8B-5802-44A2-BA8D-84F6344A80F2}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Workspace\WebApiClient\.classpath = ..\..\Workspace\WebApiClient\.classpath
+		..\..\Workspace\WebApiClient\.project = ..\..\Workspace\WebApiClient\.project
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2C7092AE-A9CD-4C75-94D1-832A3448C828}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Workspace\WebApiClient\src\FileInformation.java = ..\..\Workspace\WebApiClient\src\FileInformation.java
+		..\..\Workspace\WebApiClient\src\JavaWebApiApp.java = ..\..\Workspace\WebApiClient\src\JavaWebApiApp.java
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{94373ACF-9286-4C7F-A657-AC4B5F9D5487}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Workspace\WebApiClient\bin\FileInformation.class = ..\..\Workspace\WebApiClient\bin\FileInformation.class
+		..\..\Workspace\WebApiClient\bin\JavaWebApiApp.class = ..\..\Workspace\WebApiClient\bin\JavaWebApiApp.class
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".settings", ".settings", "{2A751CDA-FB03-4E99-BE32-7202936E0705}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\Workspace\WebApiClient\.settings\org.eclipse.jdt.core.prefs = ..\..\Workspace\WebApiClient\.settings\org.eclipse.jdt.core.prefs
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +47,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C7092AE-A9CD-4C75-94D1-832A3448C828} = {AA763B8B-5802-44A2-BA8D-84F6344A80F2}
+		{94373ACF-9286-4C7F-A657-AC4B5F9D5487} = {AA763B8B-5802-44A2-BA8D-84F6344A80F2}
+		{2A751CDA-FB03-4E99-BE32-7202936E0705} = {AA763B8B-5802-44A2-BA8D-84F6344A80F2}
 	EndGlobalSection
 EndGlobal

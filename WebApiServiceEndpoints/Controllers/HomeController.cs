@@ -10,7 +10,7 @@ namespace WebApiServiceEndpoints.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "File Server API Home Page";
 
             return View();
         }

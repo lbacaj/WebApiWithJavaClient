@@ -15,6 +15,7 @@ namespace WebApiServiceEndpoints
 
         public FileServer()
         {
+            _fileDesc = new Dictionary<int, FileInformation>();
             FillDictionary();
         }
 
@@ -32,19 +33,15 @@ namespace WebApiServiceEndpoints
                 return null;
         }
 
-        public byte[] GetFileData(int id)
+        public Stream GetFileData(int id)
         {
-            byte[] bytes = null;
-
             FileInformation fileInfo;
             bool ok = _fileDesc.TryGetValue(id, out fileInfo);
 
             if (ok)
-            {
-                bytes = File.ReadAllBytes(fileInfo.Name);
-            }
-
-            return bytes;
+                return new FileStream(fileInfo.FullFilePath, FileMode.Open);
+            else
+                return null; 
         }
 
         private void FillDictionary()
@@ -66,6 +63,7 @@ namespace WebApiServiceEndpoints
                         Id = id,
                         Name = Path.GetFileName(file),
                         Extension = fi.Extension,
+                        FullFilePath = fi.FullName,
                         Description = "some image from temp folder.",
                         ContentType = "application/png",
                         CreatedTimestamp = fi.CreationTime,
